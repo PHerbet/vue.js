@@ -1,0 +1,29 @@
+.minus{
+    background-color: red;
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
+}
+
+.plus{
+    background-color: green;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
+}
+
+button {
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+p{
+    border: solid black 2px;
+    height: 20px;
+}
+
+.calcul{
+    display: flex;
+    justify-content: center;
+    border: solid black 1px;
+}

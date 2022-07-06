@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>EventBinding sans method</h1>
+        <div class="calcul">
+            <button class="minus" v-on:click="number = number-1">-</button>
+            <p>Le nombre : {{number}}</p>
+            <button class="plus" @click="number+=1">+</button>
+        </div> -->
+        <h1>EventBinding</h1>
+        <div class="calcul">
+            <button class="minus" v-on:click="Minus">-</button>
+            <p>Le nombre : {{number}}</p>
+            <button class="plus" @click="Plus">+</button>
+        </div>
+    <!-- script pour linker vue-->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+</html>
