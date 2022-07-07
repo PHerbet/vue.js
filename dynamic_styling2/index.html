@@ -1,32 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <title>VUE-EventBinding</title>
+    <!-- mettre le liens bootstrap avent le css pour pas que bootstrap écrase le css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</style>
+    <title>Dynamic style</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="text-center">v-on + fonctions (PB ?)</h1>
+    <h1 class="text-center">dynamic style </h1>
     <div id="monApp" class="container mt-4 mb-4 p-3">
-        <div class="mb-3">
-            <button v-on:click="augmenter(20)" type="button" class="btn btn-success mt-3">+</button>
-            <button v-on:click.left="reduire(10)" type="button" class="btn btn-danger mt-3">-</button>
+        <div class="card" :class="{ style1: select_card1 }" @click="selection_card(1)" >
+            <div class="card-body">
+                card1
+            </div>
         </div>
-        <div class="mb-3">
-        <!-- Sans computed properties -->
-        <!-- <p>{{afficherNameUser()}}</p> -->
-        <!-- Avec computed properties (on fait juste référence à la fonction) -->
-        <p>{{afficherNameUser}}</p>
-
-        </div>
-        <div class="mb-3">
-        <p>{{leNombre}}</p>
+        <div class="card" :class="{ card2: select_card2 }"  @click="selection_card(2)" >
+            <div class="card-body">
+                card2
+            </div>
         </div>
     </div>
-
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>

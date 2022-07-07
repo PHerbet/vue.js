@@ -9,21 +9,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="text-center">v-on + fonctions (PB ?)</h1>
+    <h1 class="text-center">TP Le numéro Gagnant</h1>
     <div id="monApp" class="container mt-4 mb-4 p-3">
         <div class="mb-3">
-            <button v-on:click="augmenter(20)" type="button" class="btn btn-success mt-3">+</button>
-            <button v-on:click.left="reduire(10)" type="button" class="btn btn-danger mt-3">-</button>
+            <button v-on:click="le_nombre +=1" type="button" class="btn btn-success mt-3">+1</button>
+            <button v-on:click="le_nombre +=5" type="button" class="btn btn-danger mt-3">+5</button>
         </div>
         <div class="mb-3">
-        <!-- Sans computed properties -->
-        <!-- <p>{{afficherNameUser()}}</p> -->
-        <!-- Avec computed properties (on fait juste référence à la fonction) -->
-        <p>{{afficherNameUser}}</p>
+        <p>{{afficher_resultat}}</p>
 
         </div>
         <div class="mb-3">
-        <p>{{leNombre}}</p>
+        <p>{{le_nombre}}</p>
         </div>
     </div>
 
